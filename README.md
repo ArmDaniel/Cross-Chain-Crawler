@@ -1,5 +1,5 @@
 # Cross-Chain-Crawler
-Cross-chain crawler using Web of Trust and Google NL APIs to rate as many sites and services on various blockchains using the Cosmos SDK and IBC Protocol.
+Cross-chain crawler using Web of Trust and Google NL APIs to rate as many sites and services on various blockchains. The application is built using the Cosmos SDK and IBC Protocol.
 
 By virtue of using the Cosmos SDK, the crawler will be an application where records of every analysis and reputation reports are maintained with a high degree of security and reliability, since these records are public and immutable ( any changes affect all other blocks, but this requires the consensus of the network ). 
 
