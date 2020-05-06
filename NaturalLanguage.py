@@ -7,7 +7,7 @@ from google.cloud.language import enums
 from google.cloud.language import types
 
 # uses a google service account via the credentials provided in the JSON
-client = language.LanguageServiceClient.from_service_account_json('Gmail-Analysis-b66bc3d9caf1.json')
+client = language.LanguageServiceClient.from_service_account_json('credentials.json')
 
 
 def analyse(client, url, invalid_types = ['OTHER'], **data):
@@ -93,7 +93,9 @@ def result_format(url):
     for i in range(len(analysis['entities'])):
         text_entities_list.append(analysis['entities'][i]['type'])
 
-    #to remove duplicates, we convert list to a dictionary with keys formed from list elements and then convert back to list
+    #to remove duplicates, we convert list to a dictionary with keys formed from list elements 
+    #and then convert back to list - dictionaries do not accept duplicates for keys
+        
     text_entities = list(dict.fromkeys(text_entities_list))
 
     #crude cases here for sentiment analysis, perhaps more cases should be included
@@ -109,6 +111,7 @@ def result_format(url):
     print(f"Main subject: {text_category} \nEntities: {text_entities} \nSentiment: {sent} \n")
 
 
+#any url may be introduced,we used the cosmos intro as an example
 
-url = "https://www.mywot.com/wiki/index.php/API#Documentation:_Reputation_API"
+url = "https://cosmos.network/intro"
 result_format(url)
