@@ -111,7 +111,7 @@ def result_format(url):
     print(f"Main subject: {text_category} \nEntities: {text_entities} \nSentiment: {sent} \n")
 
 
-#any url may be introduced,we used the cosmos intro as an example
+#any url may be introduced,we used an article from Medium concerning TCR as an example
 
-url = "https://cosmos.network/intro"
+url = "https://medium.com/@ilovebagels/token-curated-registries-1-0-61a232f8dac7"
 result_format(url)
