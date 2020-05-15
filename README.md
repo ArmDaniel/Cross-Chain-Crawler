@@ -5,5 +5,6 @@ By virtue of using the Cosmos SDK, the crawler will be an application where reco
 
 The advantage is perhaps one blockchain technology requires: popularisation. Since this analysis will provide secure information and a reliable report on any blockchain and all applications built on it, users will have a higher degree of confidence in using them. The benefit for the Cosmos community is evident as well: people will trust the network and use it more. Thus, the Cosmos SDK takes part in what can become a Blockchain of Trust ( or should one say : An internet of trusted blockchains ? *wink* ). 
 
-This application is registered for the Cross-chain hackathon organized by Cosmos on Gitcoin: https://gitcoin.co/issue/cosmos/ics/408/4212
+This application is registered for the Cross-chain hackathon organized by Cosmos on Gitcoin: https://gitcoin.co/issue/cosmos/ics/408/4212  
+
 It was made with <3 , *hard work* and a lot of passion by a student in-between finals and assignments.
