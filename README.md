@@ -7,4 +7,4 @@ The advantage is perhaps one blockchain technology requires: popularisation. Sin
 
 This application is registered for the Cross-chain hackathon organized by Cosmos on Gitcoin: https://gitcoin.co/issue/cosmos/ics/408/4212  
 
-It was made with <3 , *hard work* and a lot of passion by a student in-between finals and assignments.
+It was made with <3 , *hard work* and **a lot** of passion by a student in-between finals and assignments.
