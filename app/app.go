@@ -56,6 +56,7 @@ var (
 		slashing.AppModuleBasic{},
 		supply.AppModuleBasic{},
 		// TODO: Add your module(s) AppModuleBasic
+		dcrawl.AppModuleBasic{},
 	)
 
 	// module account permissions
@@ -102,7 +103,7 @@ type NewApp struct {
 	distrKeeper    distr.Keeper
 	supplyKeeper   supply.Keeper
 	paramsKeeper   params.Keeper
-	scavengeKeeper scavenge.Keeper
+	scavengeKeeper dcrawl.Keeper
 
 	// Module Manager
 	mm *module.Manager
@@ -129,7 +130,7 @@ func NewInitApp(
 
 
 	keys := sdk.NewKVStoreKeys(bam.MainStoreKey, auth.StoreKey, staking.StoreKey,
-		supply.StoreKey, distr.StoreKey, slashing.StoreKey, params.StoreKey,scavenge.StoreKey)
+		supply.StoreKey, distr.StoreKey, slashing.StoreKey, params.StoreKey,dcrawl.StoreKey)
 
 	tKeys := sdk.NewTransientStoreKeys(staking.TStoreKey, params.TStoreKey)
 
@@ -209,10 +210,10 @@ func NewInitApp(
 			app.slashingKeeper.Hooks()),
 	)
 
-	app.scavengeKeeper = scavenge.NewKeeper(
+	app.scavengeKeeper = dcrawl.NewKeeper(
 		app.bankKeeper,
 		app.cdc,
-		keys[scavenge.StoreKey],
+		keys[dcrawl.StoreKey],
 	)
 
 	// NOTE: Any module instantiated in the module manager that is later modified
@@ -221,7 +222,7 @@ func NewInitApp(
 		genutil.NewAppModule(app.accountKeeper, app.stakingKeeper, app.BaseApp.DeliverTx),
 		auth.NewAppModule(app.accountKeeper),
 		bank.NewAppModule(app.bankKeeper, app.accountKeeper),
-		scavenge.NewAppModule(app.scavengeKeeper, app.bankKeeper),
+		dcrawl.NewAppModule(app.scavengeKeeper, app.bankKeeper),
 		supply.NewAppModule(app.supplyKeeper, app.accountKeeper),
 		distr.NewAppModule(app.distrKeeper, app.accountKeeper, app.supplyKeeper, app.stakingKeeper),
 		slashing.NewAppModule(app.slashingKeeper, app.accountKeeper, app.stakingKeeper),
@@ -245,7 +246,7 @@ func NewInitApp(
 		auth.ModuleName,
 		bank.ModuleName,
 		slashing.ModuleName,
-		scavenge.ModuleName
+		dcrawl.ModuleName,
 		supply.ModuleName,
 		genutil.ModuleName,
 	)
