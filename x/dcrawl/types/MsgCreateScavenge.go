@@ -49,7 +49,7 @@ func (msg MsgCreateScavange) ValidateBasic() error {
 	if msg.Creator.Empty() {
 		return sdkerrors.Wrap(sdkerrors.ErrInvalidAddress, "creator can't be empty")
 	}
-	if msg.SolutionHash = "" {
+	if msg.SolutionHash == "" {
 		return sdkerrors.Wrap(sdkerrors.ErrInvalidRequest, "solutionScavengerHash can't be empty")
 	}
 	return nil
