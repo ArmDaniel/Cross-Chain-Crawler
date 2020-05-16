@@ -8,21 +8,25 @@ WoT API for trust rating
 """
 
 
-url = "https://scorecard.api.mywot.com/v3/targets?t=google.com"
+url = "https://scorecard.api.mywot.com/v3/targets?t=ethereum.org"
 headers = {'x-user-id':'USER-ID-HERE' ,'x-api-key':'API-KEY-HERE'}
 
 wot = requests.get(url,headers=headers)
-print(wot.json())
+format_wot = wot.json()
+
+try:
+    print("The site: " + format_wot[0]['target'] + " is rated as: " + format_wot[0]['safety']['status'])
+    print("Additional information: ")
+    for i in range(len(format_wot[0]['categories'])):
+        print(format_wot[0]['categories'][i]['name'])
+except:
+    print("Not enough information")
 
 
 """
-EXAMPLE
-
-[{'target': 'google.com', 'safety': {'status': 'SAFE', 'reputations': 94, 'confidence': 67},
-'childSafety': {'reputations': 93, 'confidence': 65},
-'categories': [{'id': 501, 'name': 'good site', 'confidence': 99}, {'id': 301, 'name': 'online tracking', 'confidence': 42},
-{'id': 304, 'name': 'other', 'confidence': 23}]}]
-
-TODO: give a better format to the JSON response
+Example:
+The site ethereum.org is rated as: SAFE
+Additional information:
+good site
 
 """
