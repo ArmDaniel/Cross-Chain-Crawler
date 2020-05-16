@@ -8,3 +8,9 @@ The advantage is perhaps one blockchain technology requires: popularisation. Sin
 This application is registered for the Cross-chain hackathon organized by Cosmos on Gitcoin: https://gitcoin.co/issue/cosmos/ics/408/4212  
 
 It was made with <3 , *hard work* and **a lot** of passion by a student in-between finals and assignments.
+
+## Requirements and specifications
+
+1. The scaffold tool provided by Cosmos was used to make this app: https://github.com/cosmos/scaffold
+2. Google Natural Language API
+3. Web of Trust API
