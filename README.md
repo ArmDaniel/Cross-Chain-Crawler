@@ -11,8 +11,10 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 
 ## Plans, improvements and proposals
 
-**Popularization**: I plan on programming a Twitter bot called 'Blockchain Spider' that regularly posts the results from crawling the internet of blockchains and thus contributes to the popularisation of the app and , implicitly, the Cosmos community. 
-**Reward system**: Future development aims at rewarding users with Reputation NFTs, which may act as a badge of trust.
+**Popularization**: I plan on programming a Twitter bot called 'Blockchain Spider' that regularly posts the results from crawling the internet of blockchains and thus contributes to the popularisation of the app and , implicitly, the Cosmos community.  
+
+**Reward system**: Future development aims at rewarding users with Reputation NFTs, which may act as a badge of trust.  
+
 **Token-curated registry**: This application can certainly contribute to such a system as the TCR, where all blockchain apps and sites are submitted for evaluation and kept in a list of trusted entities.
 
 
