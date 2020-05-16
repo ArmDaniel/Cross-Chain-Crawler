@@ -9,10 +9,10 @@ import (
 // msg offered a template for the message create/commit etc programs <action> is the create scavenge
 
 // verify interface at compile time
-var _ sdk.Msg = &MsgCreateScavange{}
+var _ sdk.Msg = &MsgCreateScavenge{}
 
 // Msg<Action> - struct for unjailing jailed validator
-type MsgCreateScavange struct {
+type MsgCreateScavenge struct {
 	Creator       sdk.AccAddress  `json:"creator" yaml:"creator"` // address of the validator operator
 	Description   string      	 `json:"description" yaml:"description"`
 	SolutionHash  string 				 `json:"solutionHash" yaml:"solutionHash"`
@@ -20,8 +20,8 @@ type MsgCreateScavange struct {
 }
 
 // NewMsg<Action> creates a new Msg<Action> instance
-func NewMsgCreateScavange(creator sdk.AccAddress,description,solutionHash string, reward sdk.Coins) MsgCreateScavange {
-	return MsgCreateScavange {
+func NewMsgCreateScavenge(creator sdk.AccAddress,description,solutionHash string, reward sdk.Coins) MsgCreateScavenge {
+	return MsgCreateScavenge {
 		Creator:       creator,
 		Description:   description,
 		SolutionHash:  solutionHash,
@@ -29,23 +29,23 @@ func NewMsgCreateScavange(creator sdk.AccAddress,description,solutionHash string
 	}
 }
 
-const CreateScavangeConst = "CreateScavange"
+const CreateScavengeConst = "CreateScavenge"
 
 // nolint
-func (msg MsgCreateScavange) Route() string { return RouterKey }
-func (msg MsgCreateScavange) Type() string  { return CreateScavangeConst }
-func (msg MsgCreateScavange) GetSigners() []sdk.AccAddress {
+func (msg MsgCreateScavenge) Route() string { return RouterKey }
+func (msg MsgCreateScavenge) Type() string  { return CreateScavengeConst }
+func (msg MsgCreateScavenge) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{sdk.AccAddress(msg.Creator)}
 }
 
 // GetSignBytes gets the bytes for the message signer to sign on
-func (msg MsgCreateScavange) GetSignBytes() []byte {
+func (msg MsgCreateScavenge) GetSignBytes() []byte {
 	bz := ModuleCdc.MustMarshalJSON(msg)
 	return sdk.MustSortJSON(bz)
 }
 
 // ValidateBasic validity check for the AnteHandler
-func (msg MsgCreateScavange) ValidateBasic() error {
+func (msg MsgCreateScavenge) ValidateBasic() error {
 	if msg.Creator.Empty() {
 		return sdkerrors.Wrap(sdkerrors.ErrInvalidAddress, "creator can't be empty")
 	}
