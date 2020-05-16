@@ -2,7 +2,8 @@ package dcrawl
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	abci "github.com/tendermint/tendermint/abci/types"
+	//abci "github.com/tendermint/tendermint/abci/types"
+	"github.com/Motanovici/Cross-Chain-Crawler/x/dcrawl/types"
 )
 
 // InitGenesis initialize default parameters
@@ -16,5 +17,5 @@ func InitGenesis(ctx sdk.Context, k Keeper /* TODO: Define what keepers the modu
 // with InitGenesis
 func ExportGenesis(ctx sdk.Context, k Keeper) (data GenesisState) {
 	// TODO: Define logic for exporting state
-	return NewGenesisState()
+	return types.NewGenesisState()
 }
