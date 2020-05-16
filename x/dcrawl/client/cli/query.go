@@ -2,7 +2,7 @@ package cli
 
 import (
 	"fmt"
-	"strings"
+	//"strings"
 	"crypto/sha256"
 	"encoding/hex"
 
@@ -12,7 +12,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	//sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/Motanovici/Cross-Chain-Crawler/x/dcrawl/types"
 )
