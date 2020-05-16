@@ -9,6 +9,11 @@ This application is registered for the Cross-chain hackathon organized by Cosmos
 
 It was made with <3 , *hard work* and **a lot** of passion by a student in-between finals and assignments.
 
+## Plans and improvements
+
+I plan on programming a Twitter bot called 'Blockchain Spider' that regularly posts the results from crawling the internet of blockchains and thus contributes to the popularisation of the app and , implicitly, the Cosmos community. 
+
+
 ## Requirements and specifications
 
 1. The scaffold tool provided by Cosmos was used to make this app: https://github.com/cosmos/scaffold
