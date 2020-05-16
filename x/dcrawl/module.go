@@ -11,9 +11,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/context"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/cosmos/cosmos-sdk/x/bank"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/Motanovici/Cross-Chain-Crawler/x/dcrawl/client/cli"
 	"github.com/Motanovici/Cross-Chain-Crawler/x/dcrawl/client/rest"
+	"github.com/Motanovici/Cross-Chain-Crawler/x/dcrawl/types"
 )
 
 // Type check to ensure the interface is properly implemented
