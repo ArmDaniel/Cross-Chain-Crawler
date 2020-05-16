@@ -111,7 +111,15 @@ def result_format(url):
     print(f"Main subject: {text_category} \nEntities: {text_entities} \nSentiment: {sent} \n")
 
 
-#any url may be introduced,we used an article from Medium concerning TCR as an example
+#any url may be introduced, but as an example, we shall analyse the ethereum site
 
-url = "https://medium.com/@ilovebagels/token-curated-registries-1-0-61a232f8dac7"
+url = "https://ethereum.org/what-is-ethereum/"
 result_format(url)
+
+"""
+EXAMPLE:
+Grabbing text from source: https://ethereum.org/what-is-ethereum/
+Main subject: /Finance/Investing/Currencies & Foreign Exchange 
+Entities: ['ORGANIZATION', 'PERSON', 'WORK_OF_ART', 'LOCATION', 'CONSUMER_GOOD', 'EVENT', 'DATE', 'NUMBER'] 
+Sentiment: Positive 
+"""
