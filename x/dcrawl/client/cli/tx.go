@@ -3,7 +3,8 @@ package cli
 import (
 	"fmt"
 	"bufio"
-
+	"crypto/sha256"
+	"encoding/hex"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"
@@ -56,7 +57,7 @@ func GetCmdCreateScavenge(cdc *codec.Codec) *cobra.Command {
 
 						msg := types.NewMsgCreateScavenge(cliCtx.GetFromAddress(), args[2], solutionHashString, reward)
 						err = msg.ValidateBasic()
-						if er != nil {
+						if err != nil {
 							return err
 						}
 
