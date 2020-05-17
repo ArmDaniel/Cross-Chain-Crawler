@@ -110,9 +110,9 @@ def result_format(url):
 
     print(f"Main subject: {text_category} \nEntities: {text_entities} \nSentiment: {sent} \n")
 
+#update the github repo to CLI format
 
 #any url may be introduced, but as an example, we shall analyse the ethereum site
-
 url = "https://ethereum.org/what-is-ethereum/"
 result_format(url)
 
