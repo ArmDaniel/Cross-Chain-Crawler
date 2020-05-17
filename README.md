@@ -2,7 +2,7 @@
 
 YouTube link: https://youtu.be/H6mcCRM5gx0
 
-[Powered by the Cosmos SDK](https://cdn-images-1.medium.com/max/1600/1*vzymD5hP-EqqdSwL2uDpJA.png)
+![Powered by the Cosmos SDK](https://cdn-images-1.medium.com/max/1600/1*vzymD5hP-EqqdSwL2uDpJA.png)
 
 The Cross-chain crawler is using Web of Trust and Google NL APIs to rate as many sites and services on various blockchains. The application is built using the Cosmos SDK and IBC Protocol.
 
