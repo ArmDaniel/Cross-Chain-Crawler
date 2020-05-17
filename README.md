@@ -2,6 +2,8 @@
 
 YouTube link: https://youtu.be/H6mcCRM5gx0
 
+[Powered by the Cosmos SDK](https://cdn-images-1.medium.com/max/1600/1*vzymD5hP-EqqdSwL2uDpJA.png)
+
 The Cross-chain crawler is using Web of Trust and Google NL APIs to rate as many sites and services on various blockchains. The application is built using the Cosmos SDK and IBC Protocol.
 
 By virtue of using the Cosmos SDK, the crawler will be an application where records of every analysis and reputation reports are maintained with a high degree of security and reliability, since these records are public and immutable ( any changes affect all other blocks, but this requires the consensus of the network ). Bounties may be created by users that can request for a certain site or service to be rated. Thus, the IBC protocol is used and will allow for transactions between any 2 chains to take place, such that any rating request can be paid with the desired cryptocurrency.
@@ -28,3 +30,6 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 3. IBC Protocol: https://github.com/cosmos/ics/tree/master/ibc 
 4. Google Natural Language API: https://cloud.google.com/natural-language/docs/basics
 5. Web of Trust API : https://support.mywot.com/hc/en-us/sections/360004477734-API-
+6. GoLang 1.14
+
+If you run on Windows, then the make command can be installed with chocolatey: choco install make
