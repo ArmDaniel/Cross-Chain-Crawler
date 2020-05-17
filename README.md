@@ -21,5 +21,7 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 ## Requirements and specifications
 
 1. The scaffold tool provided by Cosmos was used to make this app: https://github.com/cosmos/scaffold
-2. Google Natural Language API
-3. Web of Trust API
+2. Cosmos SDK: https://github.com/cosmos/cosmos
+3. IBC Protocol: https://github.com/cosmos/ics/tree/master/ibc 
+4. Google Natural Language API
+5. Web of Trust API
