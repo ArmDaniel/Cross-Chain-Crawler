@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ]
+      },
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        490,
+        300
+      ],
+      "credentials": {
+        "telegramApi": "blockchain_spider"
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "your-chat-id-here",
+        "text": "Hello there, human! Welcome to the Cross Chain Crawler! With my help, you can do the following:\n\n1. Issue a request - bounty for rating a site you might need information about - Use command: issue *url here*\n2. Request information - type in the URL of the site and I shall provide what information is available in my bank :) - Use command: req *url here*\n\nWhat would you like to do?",
+        "additionalFields": {}
+      },
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        890,
+        210
+      ],
+      "credentials": {
+        "telegramApi": "blockchain_spider"
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$node[\"Telegram Trigger\"].json[\"message\"][\"text\"]}}",
+              "operation": "contains",
+              "value2": "spider"
+            }
+          ]
+        }
+      },
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        710,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "cd \"C:\\Programming\\Cross-chain Crawler\" & py -3 \"C:\\Programming\\Cross-chain Crawler\\NaturalLanguage.py\""
+      },
+      "name": "Execute Command",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        350
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$node[\"Telegram Trigger\"].json[\"message\"][\"text\"]}}",
+              "operation": "contains",
+              "value2": "req"
+            }
+          ]
+        }
+      },
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        890,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "1042645137",
+        "text": "={{$node[\"Execute Command\"].json[\"stdout\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Telegram1",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1290,
+        350
+      ],
+      "credentials": {
+        "telegramApi": "blockchain_spider"
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Command": {
+      "main": [
+        [
+          {
+            "node": "Telegram1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
