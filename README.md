@@ -23,5 +23,5 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 1. The scaffold tool provided by Cosmos was used to make this app: https://github.com/cosmos/scaffold
 2. Cosmos SDK: https://github.com/cosmos/cosmos
 3. IBC Protocol: https://github.com/cosmos/ics/tree/master/ibc 
-4. Google Natural Language API
-5. Web of Trust API
+4. Google Natural Language API: https://cloud.google.com/natural-language/docs/basics
+5. Web of Trust API : https://support.mywot.com/hc/en-us/sections/360004477734-API-
