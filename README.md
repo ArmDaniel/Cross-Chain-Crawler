@@ -31,5 +31,6 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 4. Google Natural Language API: https://cloud.google.com/natural-language/docs/basics
 5. Web of Trust API : https://support.mywot.com/hc/en-us/sections/360004477734-API-
 6. GoLang 1.14
+7. Click library for Python: provides CLI functionalities in a pythonic way
 
 If you run on Windows, then the make command can be installed with chocolatey: choco install make
