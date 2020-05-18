@@ -6,5 +6,5 @@ Many automations,such as the one provided as example, may be coded and thus adde
 
 ## Supported commands:
 
-* issue *url* - creates a scavenge for rating the given URL
-* req *url* - queries tha bank and retrieves data
+* issue *url* - creates a scavenge for rating the given URL; sets a standard price for the bounty at the moment,plans of improvement: add argument via CLI to allow any price to be set
+* req *url* - queries the APIs used for analysis, stores them on the blockchain if no other record is found
