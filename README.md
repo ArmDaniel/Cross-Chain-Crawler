@@ -1,6 +1,6 @@
 # Cross-Chain-Crawler
 
-YouTube link: https://youtu.be/H6mcCRM5gx0
+YouTube link for the demo: https://youtu.be/H6mcCRM5gx0
 
 ![Powered by the Cosmos SDK](https://cdn-images-1.medium.com/max/1600/1*vzymD5hP-EqqdSwL2uDpJA.png)
 
