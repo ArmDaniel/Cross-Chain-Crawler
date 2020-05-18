@@ -26,11 +26,12 @@ It was made with <3 , *hard work* and **a lot** of passion by a student in-betwe
 ## Requirements and specifications
 
 1. The scaffold tool provided by Cosmos was used to make this app: https://github.com/cosmos/scaffold
-2. Cosmos SDK: https://github.com/cosmos/cosmos
-3. IBC Protocol: https://github.com/cosmos/ics/tree/master/ibc 
+2. Cosmos SDK : https://github.com/cosmos/cosmos
+3. IBC Protocol : https://github.com/cosmos/ics/tree/master/ibc 
 4. Google Natural Language API: https://cloud.google.com/natural-language/docs/basics
 5. Web of Trust API : https://support.mywot.com/hc/en-us/sections/360004477734-API-
 6. GoLang 1.14
-7. Click library for Python: provides CLI functionalities in a pythonic way
+7. Gaia : https://hub.cosmos.network/master/gaia-tutorials/installation.html
+8. Click library for Python: provides CLI functionalities in a pythonic way
 
 If you run on Windows, then the make command can be installed with chocolatey: choco install make
