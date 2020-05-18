@@ -56,7 +56,7 @@
     },
     {
       "parameters": {
-        "command": "cd \"C:\\Programming\\Cross-chain Crawler\" & py -3 \"C:\\Programming\\Cross-chain Crawler\\NaturalLanguage.py\""
+        "command": "cd \"C:\\Programming\\Cross-chain Crawler\" & py -3 \"C:\\Programming\\Cross-chain Crawler\\NaturalLanguage.py\" {{$node[\"Telegram Trigger\"].json[\"message\"][\"text\"]}}"
       },
       "name": "Execute Command",
       "type": "n8n-nodes-base.executeCommand",
