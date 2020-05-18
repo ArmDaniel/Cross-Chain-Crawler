@@ -1,6 +1,6 @@
 import requests
 import json
-
+import click
 from google.cloud import language
 from google.oauth2 import service_account
 from google.cloud.language import enums
@@ -9,6 +9,13 @@ from google.cloud.language import types
 # uses a google service account via the credentials provided in the JSON
 client = language.LanguageServiceClient.from_service_account_json('credentials.json')
 
+#initiate the CLI functionalities in main
+@click.group
+def main():
+        
+        pass
+
+#performs NL analysis on the URL data
 
 def analyse(client, url, invalid_types = ['OTHER'], **data):
 
@@ -110,11 +117,25 @@ def result_format(url):
 
     print(f"Main subject: {text_category} \nEntities: {text_entities} \nSentiment: {sent} \n")
 
-#update the github repo to CLI format
+def trust_rating(url):
+    headers = {'x-user-id':'ID-HERE' ,'x-api-key':'API-KEY-HERE'}
+    url_format = "https://scorecard.api.mywot.com/v3/targets?t=" + url
+    wot = requests.get(url_format,headers=headers)
+    format_wot = wot.json()
 
-#any url may be introduced, but as an example, we shall analyse the ethereum site
-url = "https://ethereum.org/what-is-ethereum/"
-result_format(url)
+    try:
+        print("The site: " + format_wot[0]['target'] + " is rated as: " + format_wot[0]['safety']['status'])
+        print("Additional information: ")
+        for i in range(len(format_wot[0]['categories'])):
+            print(format_wot[0]['categories'][i]['name'])
+    except:
+        print("Not enough information")
+
+@main.command
+@click.argument('url')
+def req(url):
+        result_format(url)
+        trust_rating(url)
 
 """
 EXAMPLE:
