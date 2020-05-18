@@ -2,7 +2,12 @@
 
 The Telegram Bot is used in order to popularise the use of blockchain technologies and be employed in any group, spreading the word.
 
+It is very user-friendly and creates a trust chain amongst a community.
+
+### Our spider is hackable
+
 Many automations,such as the one provided as example, may be coded and thus added as functionalities to the bot.
+It grows with you!
 
 ## Supported commands:
 
