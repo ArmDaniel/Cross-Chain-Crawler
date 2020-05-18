@@ -3,6 +3,7 @@ import requests
 """
 
 WoT API for trust rating
+Example usage, the full code and processing is done in NaturalLanguage.py
 
 
 """
