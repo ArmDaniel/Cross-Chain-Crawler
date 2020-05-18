@@ -1,10 +1,15 @@
-//Creates a scavenge(just an example, there can be any url served as input)
+
+#Clarification: the user does not have to type those CLI commands, the bot translates "issue 'url'" into the following command
+#and executes it
+
+
+#Creates a scavenge(just an example, there can be any url served as input)
 scavengeCLI tx dcrawl createScavenge 69foo "How safe is ethereum.org?" --from bot
 
-//lists the scavenge
+#lists the scavenge
 scavengeCLI q dcrawl get e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
-/*
+: '
 Example:
 solutionHash is an artefact, it will be modified
 
@@ -21,4 +26,4 @@ solutionHash is an artefact, it will be modified
   "solution": "",
   "scavenger": ""
 }
-*/
+'
